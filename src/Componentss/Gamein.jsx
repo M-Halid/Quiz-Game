@@ -7,7 +7,7 @@ import replay from './replay.png';
 import game from './game.png';
 import time from './time.png';
 import witz from "./witz.gif"
-import { Table } from 'react-bootstrap';
+//import { Table, Button } from 'react-bootstrap';
 import point from './point.mp3';
 import win from './win game.mp3';
 
@@ -626,7 +626,7 @@ class Gamein extends Component {
     }
 
     listallscores = () => {
-        const URL = "https://mybackforwahl.web.app/"
+        const URL = "https://myscorebackend.onrender.com/"
         fetch(URL)
             .then(response => response.json())
             .then(score => {
@@ -652,7 +652,7 @@ class Gamein extends Component {
 
 
 
-        const URL = "https://mybackforwahl.web.app/"
+        const URL = "https://myscorebackend.onrender.com/"
 
         const playerName = this.props.playerName
         const score = this.state.score
@@ -721,7 +721,7 @@ class Gamein extends Component {
                             <img src={witz} alt="Warten Sie Bitte.." />
                         </div>
 
-                        <Table className="table" striped variant="dark">
+                        <table className="table" striped variant="dark">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -759,14 +759,14 @@ class Gamein extends Component {
                                     <td>{this.state.s5}</td>
                                 </tr>
                             </tbody>
-                        </Table>
-                        <Table className="table" striped variant="dark">
+                        </table>
+                        <table className="table" striped variant="dark">
                             <tbody>
                                 <tr>
                                     <td><b>{this.state.plyersName}</b></td><td><b>{this.state.plyersScore}</b></td>
                                 </tr>
                             </tbody>
-                        </Table>
+                        </table>
                     </div>
 
 
